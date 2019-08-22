@@ -10,12 +10,17 @@
             document.getElementById('limpeza').style.display ="none";
             document.getElementById('refeicao').style.display ="none";
             document.getElementById('refeitorio').style.display ="none";
-
+            document.getElementById('enviar').style.display ="none";
         }
 
-        function next(id, id2){
+        function next(id, id2, id3){
             document.getElementById(id).style.display = "none";
             document.getElementById(id2).style.display = "inline";
+            document.getElementById(id3).style.display = "inline";
+        }
+
+        function enviar(id){
+            document.getElementById(id).style.display = "inline";
         }
 
     </script>
@@ -37,62 +42,65 @@
         <div class="#" id="atendimento">
             <label>O nosso atendimento? </label>
             <label>
-            <input type="radio" name="atendimento" onclick="next('atendimento', 'refeitorio')" value=10> <img src="images/bom.jpg">
+            <input type="radio" name="atendimento" onclick="next('atendimento', 'refeitorio', '' )" value=10> <img src="images/bom.jpg">
             </label>
             <div class="campos">Muito Satisfeito</div>
             <label>
-            <input type="radio" name="atendimento" onclick="next('atendimento', 'refeitorio')" value=5> <img src="images/regular.jpg">
+            <input type="radio" name="atendimento" onclick="next('atendimento', 'refeitorio', '')" value=5> <img src="images/regular.jpg">
             </label>
             <div class="campos">Satisfeito</div>
             <label>
-            <input type="radio" name="atendimento" onclick="next('atendimento', 'refeitorio')" value=1> <img src="images/ruim.jpg">
+            <input type="radio" name="atendimento" onclick="next('atendimento', 'refeitorio', '')" value=1> <img src="images/ruim.jpg">
             </label>
             <div class="campos">Insatisfeito</div>
         </div>
         <div class="teste" id="refeitorio">
             <label>A nova instação do Refeitório?  </label>
             <label>
-            <input type="radio" name="refeitorio" onclick="next('refeitorio', 'refeicao')" value=10> <img src="images/bom.jpg">
+            <input type="radio" name="refeitorio" onclick="next('refeitorio', 'refeicao', '')" value=10> <img src="images/bom.jpg">
             </label>
             <div class="campos">Muito Satisfeito</div>
             <label>
-            <input type="radio" name="refeitorio" onclick="next('refeitorio', 'refeicao')" value=5> <img src="images/regular.jpg">
+            <input type="radio" name="refeitorio" onclick="next('refeitorio', 'refeicao', '')" value=5> <img src="images/regular.jpg">
             </label>
             <div class="campos">Satisfeito</div>
             <label>
-            <input type="radio" name="refeitorio" onclick="next('refeitorio', 'refeicao')" value=1> <img src="images/ruim.jpg">
+            <input type="radio" name="refeitorio" onclick="next('refeitorio', 'refeicao', '')" value=1> <img src="images/ruim.jpg">
             </label>
             <div class="campos">Insatisfeito</div>
         </div>
         <div class="teste" id="refeicao">
             <label>As Refeições?</label>
             <label>
-            <input type="radio" name="refeicao" onclick="next('refeicao', 'limpeza')" value=10> <img src="images/bom.jpg">
+            <input type="radio" name="refeicao" onclick="next('refeicao', 'limpeza', 'enviar')" value=10> <img src="images/bom.jpg">
             </label>
             <div class="campos">Muito Satisfeito</div>
             <label>
-            <input type="radio" name="refeicao" onclick="next('refeicao', 'limpeza')" value=10> <img src="images/regular.jpg">
+            <input type="radio" name="refeicao" onclick="next('refeicao', 'limpeza', 'enviar')" value=5> <img src="images/regular.jpg">
             </label>
             <div class="campos">Satisfeito</div>
             <label>
-            <input type="radio" name="refeicao" onclick="next('refeicao', 'limpeza')" value=10> <img src="images/ruim.jpg">
+            <input type="radio" name="refeicao" onclick="next('refeicao', 'limpeza', 'enviar')" value=1> <img src="images/ruim.jpg">
             </label>
             <div class="campos">Insatisfeito</div>
         </div>
         <div class="teste" id="limpeza">
             <label>A limpeza?</label>
             <label>
-            <input type="submit" name="limpeza" value=10> <img src="images/bom.jpg">
+            <input type="radio" name="limpeza" value=10> <img src="images/bom.jpg">
             </label>
             <div class="campos">Muito Satisfeito</div>
             <label>
-            <input type="submit" name="limpeza" value=5> <img src="images/regular.jpg">
+            <input type="radio" name="limpeza" value=5> <img src="images/regular.jpg">
             </label>
             <div class="campos">Satisfeito</div>
             <label>
-            <input type="submit" name="limpeza" value=1> <img src="images/ruim.jpg">
+            <input type="radio" name="limpeza" value=1> <img src="images/ruim.jpg">
             </label>
             <div class="campos">Insatisfeito</div>
+        </div>
+        <div class="enviar" id="enviar">
+            <input type="submit" value="Enviar!">
         </div>
         </form>
     </body>
