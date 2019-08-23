@@ -1,0 +1,33 @@
+.mSatisfatorio{
+    font-size: 100%;
+    background-color: lightgreen;
+}
+
+.Satisfatorio{
+    font-size: 100%;
+    background-color: #efef7b;
+}
+.Insatisfeito{
+    font-size: 100%;
+    background-color: lightcoral;
+}
+.outros{
+    background-color: darkgray;
+}
+
+table{
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    height: 80%;
+    width: 90%;
+    align-items: center;
+    background-color: black;
+}
+
+td{
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

@@ -1,124 +1,93 @@
-<?php
-include_once("conexao.php");
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="css/style3.css" media="screen" />
+</head>
+<body>
+<?php include "conexao.php"?>
+<table>
+    <tr>
+        <td class="outros"> 
+           Total: <?php $sql = "Select * from avalia "; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?> pessoas avaliaram!</td>
+        <td class="mSatisfatorio">Muito Satisfeito</td>
+        <td class="Satisfatorio">Satisfeito</td>
+        <td class="Insatisfeito">Insatisfeito</td>
+    </tr>
+    <tr>
+        <td class="outros">Atendimento:</td>
+        <td class="mSatisfatorio">
+        <?php $sql = "Select atendimento from avalia where atendimento = 10"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+        <td class="Satisfatorio">
+        <?php $sql = "Select atendimento from avalia where atendimento = 5"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+        <td class="Insatisfeito">
+        <?php $sql = "Select atendimento from avalia where atendimento = 1"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+    </tr>
+    <tr>
+        <td class="outros">Refeitorio:</td>
+        <td class="mSatisfatorio">
+        <?php $sql = "Select refeitorio from avalia where refeitorio = 10"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+        <td class="Satisfatorio">
+        <?php $sql = "Select refeitorio from avalia where refeitorio = 5"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+        <td class="Insatisfeito">
+        <?php $sql = "Select refeitorio from avalia where refeitorio = 1"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+    </tr>
+    <tr>
+        <td class="outros">Refeição:</td>
+        <td class="mSatisfatorio">
+        <?php $sql = "Select refeicao from avalia where refeicao = 10"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+        <td class="Satisfatorio">
+        <?php $sql = "Select refeicao from avalia where refeicao = 5"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+        <td class="Insatisfeito">
+        <?php $sql = "Select refeicao from avalia where refeicao = 1"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+        <tr>
+        <td class="outros">Limpeza:</td>
+        <td class="mSatisfatorio">
+        <?php $sql = "Select limpeza from avalia where limpeza = 10"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+        <td class="Satisfatorio">
+        <?php $sql = "Select limpeza from avalia where limpeza = 5"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+        <td class="Insatisfeito">
+        <?php $sql = "Select limpeza from avalia where limpeza = 1"; $result = $conn->query($sql); $num_rows = mysqli_num_rows($result);  
+        echo $num_rows;
+        ?>
+        </td>
+    </tr><hr>
+    <div>
 
-$sqlAtendimento = "Select atendimento from avalia where atendimento = 10";
-$resultAtendimento = $conn->query($sqlAtendimento);
-$num_rowsAtendimento = mysqli_num_rows($resultAtendimento);
-
-echo "Quantidade de pessoas que falaram que o ATENDIMENTO é muito satisfatório: " . $num_rowsAtendimento . "<br>";
-
-//////////////////////////////////////////
-
-$sqlRefeitorio = "Select refeitorio from avalia where refeitorio = 10";
-$resultRefeitorio = $conn->query($sqlRefeitorio);
-$num_rowsRefeitorio = mysqli_num_rows($resultRefeitorio);
-
-echo "Quantidade de pessoas que falaram que o REFEITÓRIO é muito satisfatório: " . $num_rowsRefeitorio . "<br>";
-
-////////////////////////////////////////
-
-
-$sqlRefeicao = "Select refeicao from avalia where refeicao = 10";
-$resultRefeicao = $conn->query($sqlRefeicao);
-$num_rowsRefeicao = mysqli_num_rows($resultRefeicao);
-
-echo "Quantidade de pessoas que falaram que a REFEIÇÃO é muito satisfatória: " . $num_rowsRefeicao . "<br>";
-
-
-/////////////////////////////////////
-
-$sqlLimpeza = "Select limpeza from avalia where limpeza = 10";
-$resultLimpeza = $conn->query($sqlLimpeza);
-$num_rowsLimpeza = mysqli_num_rows($resultLimpeza);
-
-echo "Quantidade de pessoas que falaram que LIMPEZA é muito satisfatória : " . $num_rowsLimpeza . "<br><br>";
-
-////////////////////////////////////////////
-////////////////////////////////////////////
-////////////////////////////////////////////
-////////////////////////////////////////////
-
-include_once("conexao.php");
-
-$sqlAtendimento = "Select atendimento from avalia where atendimento = 5";
-$resultAtendimento = $conn->query($sqlAtendimento);
-$num_rowsAtendimento = mysqli_num_rows($resultAtendimento);
-
-echo "Quantidade de pessoas que falaram que o ATENDIMENTO é apenas satisfatório: " . $num_rowsAtendimento . "<br>";
-
-//////////////////////////////////////////
-
-$sqlRefeitorio = "Select refeitorio from avalia where refeitorio = 5";
-$resultRefeitorio = $conn->query($sqlRefeitorio);
-$num_rowsRefeitorio = mysqli_num_rows($resultRefeitorio);
-
-echo "Quantidade de pessoas que falaram que o REFEITÓRIO é apenas satisfatório: " . $num_rowsRefeitorio . "<br>";
-
-////////////////////////////////////////
-
-
-$sqlRefeicao = "Select refeicao from avalia where refeicao = 5";
-$resultRefeicao = $conn->query($sqlRefeicao);
-$num_rowsRefeicao = mysqli_num_rows($resultRefeicao);
-
-echo "Quantidade de pessoas que falaram que a REFEIÇÃO é apenas satisfatória: " . $num_rowsRefeicao . "<br>";
-
-
-/////////////////////////////////////
-
-$sqlLimpeza = "Select limpeza from avalia where limpeza = 5";
-$resultLimpeza = $conn->query($sqlLimpeza);
-$num_rowsLimpeza = mysqli_num_rows($resultLimpeza);
-
-echo "Quantidade de pessoas que falaram que LIMPEZA é apenas satisfatória : " . $num_rowsLimpeza . "<br><br>";
-
-
-////////////////////////////////////////////
-////////////////////////////////////////////
-////////////////////////////////////////////
-////////////////////////////////////////////
-
-include_once("conexao.php");
-
-$sqlAtendimento = "Select atendimento from avalia where atendimento = 1";
-$resultAtendimento = $conn->query($sqlAtendimento);
-$num_rowsAtendimento = mysqli_num_rows($resultAtendimento);
-
-echo "Quantidade de pessoas que falaram que o ATENDIMENTO não é satisfatório: " . $num_rowsAtendimento . "<br>";
-
-//////////////////////////////////////////
-
-$sqlRefeitorio = "Select refeitorio from avalia where refeitorio = 1";
-$resultRefeitorio = $conn->query($sqlRefeitorio);
-$num_rowsRefeitorio = mysqli_num_rows($resultRefeitorio);
-
-echo "Quantidade de pessoas que falaram que o REFEITÓRIO não satisfatório: " . $num_rowsRefeitorio . "<br>";
-
-////////////////////////////////////////
-
-
-$sqlRefeicao = "Select refeicao from avalia where refeicao = 1";
-$resultRefeicao = $conn->query($sqlRefeicao);
-$num_rowsRefeicao = mysqli_num_rows($resultRefeicao);
-
-echo "Quantidade de pessoas que falaram que a REFEIÇÃO não satisfatória: " . $num_rowsRefeicao . "<br>";
-
-
-/////////////////////////////////////
-
-$sqlLimpeza = "Select limpeza from avalia where limpeza = 1";
-$resultLimpeza = $conn->query($sqlLimpeza);
-$num_rowsLimpeza = mysqli_num_rows($resultLimpeza);
-
-echo "Quantidade de pessoas que falaram que LIMPEZA não satisfatória : " . $num_rowsLimpeza . "<br><br>";
-
-
-/////////////////////////////////////////////////////
-
-$sqlQuantidade = "Select matricula from avalia";
-$resultQuantidade = $conn->query($sqlQuantidade);
-$num_rowsQuantidade = mysqli_num_rows($resultQuantidade);
-
-echo "Quantidade de pessoas que avaliaram: " . $num_rowsQuantidade . "<br>";
-
-?>
+    </div>
+    </body>
+</html>
