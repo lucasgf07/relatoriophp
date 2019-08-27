@@ -47,7 +47,8 @@
         <center>
         <form method="POST" action="processa.php">
             <div name="teclado" class="teclado" id="teclado">
-            <input name="matricula" type="number" id="inMatricula" maxlength="9999" required="true">
+                <h2>Digite sua matricula:</h2>
+            <input name="matricula" type="number" id="inMatricula" placeholder="Insira sua matricula..." maxlength="9999" required="true">
             <table>
                 <tr>
                     <td>
