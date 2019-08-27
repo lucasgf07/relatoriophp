@@ -5,6 +5,9 @@ label{
     justify-content: center;
     align-items: center;
 }
+.geral{
+    font-size: 100%;
+}
 .modal{
    font-size: 100%;
     text-align: center;
@@ -13,9 +16,23 @@ label{
     justify-content: center;
     align-items: center
 }
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position:absolute;
+    text-align: center;
+    bottom:0%;
+    width:99.5%;
+    height: 15%;
+    font-size: 80%;
+}
 .enviar{
   left: 50%;
   position: absolute;
+  padding-top: 3px;
   transform: translateX(-50%);
 }
 .campos{
@@ -44,10 +61,27 @@ label{
   /* IMAGE STYLES */
   [type=radio] + img {
     cursor: pointer;
-    width: 5%
+    width: 6%
   }
   
   /* CHECKED STYLES */
   [type=radio]:checked + img {
     outline: 0.5px solid #f00;
   }
+
+.btTeclado{
+    width:100px;
+    height:100px;
+    font-size: 150%;
+}
+
+#inMatricula{
+    width: 15.5%;
+    height: 70px;
+    font-size: 150%;
+}
+
+.X{
+    width: 50px;
+    height: 70px;
+}
