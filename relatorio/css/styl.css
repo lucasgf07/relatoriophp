@@ -1,8 +1,8 @@
 .geral{
-    font-size: 100%;
+    font-size: 150%;
 }
 .modal{
-   font-size: 100%;
+   font-size: 120%;
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -25,8 +25,10 @@
 .enviar{
   left: 50%;
   position: absolute;
-  padding-top: 3px;
+  padding-top: 2px;
   transform: translateX(-50%);
+  height: 23%;
+  font-size: 100%;
 }
 .campos{
     font-size: 100%;
@@ -35,11 +37,6 @@
     justify-content: center;
     align-items: center;
 }
-.teste{
-    top: 10%;
-    font-size: 120%;
-}
-
 [type=radio] { 
     position: absolute;
     opacity: 0;
@@ -50,7 +47,7 @@
   /* IMAGE STYLES */
   [type=radio] + img {
     cursor: pointer;
-    width: 6%
+    width: 7%
   }
   
   /* CHECKED STYLES */
@@ -67,7 +64,7 @@
 #inMatricula{
     width: 15.5%;
     height: 70px;
-    font-size: 150%;
+    font-size: 140%;
 }
 
 .X{

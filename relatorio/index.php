@@ -41,7 +41,7 @@
         }
 
     </script>
-<link rel="stylesheet" type="text/css" href="css/st2.css" media="screen" />
+<link rel="stylesheet" type="text/css" href="css/styl.css" media="screen" />
 </head>
     <body>
         <center>
@@ -96,9 +96,9 @@
 
         </div>
             <div class="geral" id="geral">
-                <label>Como você avalia...</label>
-                <div class="#" id="atendimento">
-                    <label>O nosso atendimento? </label>
+                <label>Como você avalia...</label><br>
+                <div class="teste" id="atendimento">
+                    <label>O nosso atendimento? </label><br>
                     <label>
                     <input type="radio" name="atendimento" onclick="next('atendimento', 'refeitorio')" value=10> <img src="images/bom.jpg">
                     </label>
@@ -113,7 +113,7 @@
                     <div class="campos">Insatisfeito</div>
                 </div>
                 <div class="teste" id="refeitorio">
-                    <label>A nova instalação do refeitório?</label>
+                    <label>A nova instalação do refeitório?</label><br>
                     <label>
                     <input type="radio" name="refeitorio" onclick="next('refeitorio', 'refeicao')" value=10> <img src="images/bom.jpg">
                     </label>
@@ -128,7 +128,7 @@
                     <div class="campos">Insatisfeito</div>
                 </div>
                 <div class="teste" id="refeicao">
-                    <label>As refeições?</label>
+                    <label>As refeições?</label><br>
                     <label>
                     <input type="radio" name="refeicao" onclick="next('refeicao', 'limpeza')" value=10> <img src="images/bom.jpg">
                     </label>
@@ -143,7 +143,7 @@
                     <div class="campos">Insatisfeito</div>
                 </div>
                 <div class="teste" id="limpeza">
-                    <label>A limpeza do refeitório?</label>
+                    <label>A limpeza do refeitório?</label><br>
                     <label>
                     <input type="radio" name="limpeza"onclick="next('refeicao', 'enviar', '')"  value=10> <img src="images/bom.jpg">
                     </label>
@@ -158,16 +158,10 @@
                     <div class="campos">Insatisfeito</div>
                 </div>
                 <div class="enviar" id="enviar">
-                    <input type="submit" value="Enviar!">
+                    <input class="enviar" type="submit" value="Enviar!">
                 </div>
             </div>
         </form>
-        <footer class="footer">
-            Laticínio Belo Vale LTDA <br/>
-            Rua Manoel Celestino de Paula, 101 <br/>
-            Várzea da Cruz - Sousa/PB - CEP: 58806-658 <br/>
-            Fones: Portaria (83) 3522-222 - Facilities (83) 9633-2410
-    </footer>
     </center>
     </body>
 </html>
